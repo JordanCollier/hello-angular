@@ -7,7 +7,8 @@
 </p>
 <input ng-model="vm.corndog">
 <p ng-repeat="food in vm.foods">
-  {{food}}
+  <!-- <pre>{{vm.foods | json:2}}</pre> -->
+  {{food | uppercase}}
 </p>
 
 <form ng-submit="vm.addFood()">
