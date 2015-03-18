@@ -20,8 +20,8 @@ angular.module('app', [])
   .controller('MainController', MainController)
   ;
 
-MainController.$inject = [];
-function MainController() {
+MainController.$inject = ['$scope', "$interval"];
+function MainController($scope, $interval) {
     var vm = this;
     vm.corndog = "Corn-batter-friend meat tube!";
     vm.burrito = burrito;
@@ -31,6 +31,13 @@ function MainController() {
       "shrimp",
       "Some food is yummy"
     ];
+
+    setInterval(function(){
+      vm.foods.push(Math.random());
+      $scope.$apply();
+
+
+    }, 1000);
 
     function addFood() {
       vm.foods.push(vm.newFood);
