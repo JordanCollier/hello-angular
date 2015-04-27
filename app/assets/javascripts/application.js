@@ -20,8 +20,13 @@ angular.module('app', [])
   .controller('MainController', MainController)
   ;
 
-MainController.$inject = ['$sco pe'];
+MainController.$inject = ['$scope'];
 function MainController($scope) {
     $scope.corndog = "Corn-batter-friend meat tube!";
+    $scope.burrito = burrito;
+
+    function burrito() {
+      return "Tortilla stuff!";
+    };
 }
 })();
