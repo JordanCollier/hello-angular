@@ -13,5 +13,15 @@
 //= require jquery
 //= require jquery_ujs
 //= require angular
-
 //= require_tree .
+
+(function() {
+angular.module('app', [])
+  .controller('MainController', MainController)
+  ;
+
+MainController.$inject = ['$sco pe'];
+function MainController($scope) {
+    $scope.corndog = "Corn-batter-friend meat tube!";
+}
+})();
