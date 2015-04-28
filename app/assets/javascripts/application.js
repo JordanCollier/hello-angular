@@ -24,6 +24,11 @@ MainController.$inject = ['$scope'];
 function MainController($scope) {
     $scope.corndog = "Corn-batter-friend meat tube!";
     $scope.burrito = burrito;
+    $scope.foods = ["meat",
+    "Spaghetti",
+    "shrimp",
+    "Some food is yummy"
+    ];
 
     function burrito() {
       return "Tortilla stuff!";
