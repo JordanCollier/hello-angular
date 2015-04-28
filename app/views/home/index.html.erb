@@ -1,19 +1,19 @@
 <h1>Hello</h1>
 <p>
-  {{corndog}}
+  {{vm.corndog}}
 </p>
 <p>
-  {{burrito()}}
+  {{vm.burrito()}}
 </p>
-<input ng-model="corndog">
-<p ng-repeat="food in foods">
+<input ng-model="vm.corndog">
+<p ng-repeat="food in vm.foods">
   {{food}}
 </p>
 
-<form ng-submit="addFood()">
+<form ng-submit="vm.addFood()">
 <fieldset>
   <label for="stuff">Enter a new food item</label>
-  <input id="stuff" ng-model="newFood">
+  <input id="stuff" ng-model="vm.newFood">
   <input type="submit" value="Cook it up!">
 </fieldset>
 </form>

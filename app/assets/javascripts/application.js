@@ -20,20 +20,21 @@ angular.module('app', [])
   .controller('MainController', MainController)
   ;
 
-MainController.$inject = ['$scope'];
-function MainController($scope) {
-    $scope.corndog = "Corn-batter-friend meat tube!";
-    $scope.burrito = burrito;
-    $scope.addFood = addFood;
-    $scope.foods = ["meat",
-    "Spaghetti",
-    "shrimp",
-    "Some food is yummy"
+MainController.$inject = [];
+function MainController() {
+    var vm = this;
+    vm.corndog = "Corn-batter-friend meat tube!";
+    vm.burrito = burrito;
+    vm.addFood = addFood;
+    vm.foods = ["meat",
+      "Spaghetti",
+      "shrimp",
+      "Some food is yummy"
     ];
 
     function addFood() {
-      $scope.foods.push($scope.newFood);
-      $scope.newFood = '';
+      vm.foods.push(vm.newFood);
+      vm.newFood = '';
     }
 
     function burrito() {
