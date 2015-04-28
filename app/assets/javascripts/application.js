@@ -27,6 +27,6 @@ function MainController($scope) {
 
     function burrito() {
       return "Tortilla stuff!";
-    };
+    }
 }
 })();
